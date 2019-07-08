@@ -16,7 +16,8 @@
     "@nuxtjs/vuetify": "0.5.5",
     "nuxt": "^2.8.1",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "vue-class-component": "^7.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",

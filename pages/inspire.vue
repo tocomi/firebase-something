@@ -14,6 +14,24 @@
           </small>
         </footer>
       </blockquote>
+      <v-btn @click="smash">SMAAAAAAASH!!</v-btn>
+      <v-text>{{ count }}</v-text>
     </v-flex>
   </v-layout>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component({
+})
+export default class Inspire extends Vue {
+
+  count: number = 1
+
+  smash(): void {
+    this.count *= 2
+  }
+}
+</script>
