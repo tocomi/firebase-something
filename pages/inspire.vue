@@ -24,8 +24,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 
-@Component({
-})
+@Component
 export default class Inspire extends Vue {
 
   count: number = 1
