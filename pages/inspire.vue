@@ -21,21 +21,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import { Component, Vue } from 'vue-property-decorator'
 
-@Component
+@Component({
+  async asyncData({ app }) {
+    const result = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
+    console.log(result)
+  }
+})
 export default class Inspire extends Vue {
 
   count: number = 1
-
-  async mounted() {
-    console.log(
-      JSON.stringify(
-        await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'), true, ' '
-      )
-    )
-  }
 
   smash(): void {
     this.count *= 2
