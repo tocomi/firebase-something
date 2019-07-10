@@ -29,8 +29,17 @@ export default class Inspire extends Vue {
 
   count: number = 1
 
+  async mounted() {
+    console.log(
+      JSON.stringify(
+        await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'), true, ' '
+      )
+    )
+  }
+
   smash(): void {
     this.count *= 2
   }
+
 }
 </script>
