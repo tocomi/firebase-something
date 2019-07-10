@@ -15,7 +15,7 @@
         </footer>
       </blockquote>
       <v-btn @click="smash">SMAAAAAAASH!!</v-btn>
-      <v-text>{{ count }}</v-text>
+      <p>{{ count }}</p>
     </v-flex>
   </v-layout>
 </template>

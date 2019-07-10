@@ -7,7 +7,7 @@
         class="mb-5"
       >
       <blockquote class="blockquote">
-        <v-text>{{ userId }}</v-text>
+        <p>{{ userId }}</p>
       </blockquote>
     </v-flex>
   </v-layout>
