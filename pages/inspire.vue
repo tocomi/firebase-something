@@ -25,8 +25,11 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
   async asyncData({ app }) {
-    const result = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
-    console.log(result)
+    const items = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
+    console.log(items)
+    return {
+      items
+    }
   }
 })
 export default class Inspire extends Vue {
