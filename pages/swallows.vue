@@ -1,20 +1,19 @@
 <template lang="pug">
   v-layout
     v-flex(text-xs-center)
-      | hoge
+      Result
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import Result from '../components/Result.vue'
 
-@Component
-export default class Inspire extends Vue {
-
-  count: number = 1
-
-  smash(): void {
-    this.count *= 2
+@Component({
+  components: {
+    Result,
   }
+})
+export default class Inspire extends Vue {
 
 }
 </script>
