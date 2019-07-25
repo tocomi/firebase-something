@@ -1,9 +1,8 @@
 <template lang="pug">
-  div#results
-    v-flex(v-for="result in results" text-xs-center xs6)
-      div
-        p {{ result.team }}
-        p {{ result.score }}
+  v-layout
+    v-flex(v-for="result in results" text-xs-center xs12 sm6)
+      p {{ result.team }}
+      p {{ result.score }}
 </template>
 
 <script lang="ts">

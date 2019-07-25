@@ -1,7 +1,5 @@
 <template lang="pug">
-  v-layout
-    v-flex(text-xs-center)
-      Result
+  Result
 </template>
 
 <script lang="ts">
