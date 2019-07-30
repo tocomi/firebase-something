@@ -24,6 +24,11 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component({
+  head() {
+    return {
+      title: this.userId
+    }
+  },
   async asyncData({ route, app }) {
     const userId: string = route.params.id
     const user: object = await app.$axios.$get(`https://qiita.com/api/v2/users/${userId}`)
@@ -34,6 +39,8 @@ import Component from 'vue-class-component'
   }
 })
 export default class Id extends Vue {
+
   userId: string = this.$nuxt.$route.params.id
+
 }
 </script>
