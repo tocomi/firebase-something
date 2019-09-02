@@ -1,4 +1,4 @@
-# swahhor
+# qiita-api
 
 > My tremendous Nuxt.js project
 
