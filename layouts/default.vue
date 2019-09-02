@@ -103,8 +103,8 @@ export default {
         },
         {
           icon: 'bubble_chart',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Qiita',
+          to: '/qiita'
         },
       ],
       miniVariant: false,
