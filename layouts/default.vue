@@ -106,6 +106,10 @@ export default {
           title: 'Qiita',
           to: '/qiita'
         },
+        {
+          title: 'Todo',
+          to: '/todo'
+        },
       ],
       miniVariant: false,
       right: true,
