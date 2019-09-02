@@ -106,10 +106,6 @@ export default {
           title: 'Inspire',
           to: '/inspire'
         },
-        {
-          title: 'swallows',
-          to: '/swallows'
-        }
       ],
       miniVariant: false,
       right: true,

@@ -1,4 +1,4 @@
-# qiita-api
+# firebase-something
 
 > My tremendous Nuxt.js project
 
