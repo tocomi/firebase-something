@@ -37,6 +37,7 @@ export default {
   */
   plugins: [
     '~/plugins/axios.js',
+    '~/plugins/firebase.js',
   ],
   env: {
     QIITA_TOKEN: process.env.QIITA_TOKEN
