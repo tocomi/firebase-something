@@ -6,4 +6,4 @@ firebase.initializeApp(...firebaseKey)
 const db = firebase.firestore
 const setting = { timestampsInSnapshots: true }
 db.setting(setting)
-return { db }
+export { db }
