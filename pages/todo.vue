@@ -45,7 +45,7 @@ export default class Inspire extends Vue {
     this.email = ''
   }
 
-  deleteData(user): void {
+  deleteData(user: any): void {
     const userRef = db.collection('users')
     userRef.doc(user.id).delete()
   }
