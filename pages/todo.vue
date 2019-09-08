@@ -12,7 +12,7 @@ v-layout
           ul
             li name: {{ user.name }}
             li email: {{ user.email }}
-            v-btn(text x-small) delete
+            v-btn(flat small) delete
 </template>
 
 <script lang="ts">
