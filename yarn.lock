@@ -1039,11 +1039,11 @@
     consola "^2.5.6"
     http-proxy-middleware "^0.19.1"
 
-"@nuxtjs/vuetify@0.5.5":
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-0.5.5.tgz#0c556afc6ea638dd8e28bf6100b69138fc1b57e3"
+"@nuxtjs/vuetify@0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-0.5.6.tgz#b070ebb338439aabb130b486db622b74b8c01e92"
   dependencies:
-    vuetify "^1.5.1"
+    vuetify "^1.5.14"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -7977,9 +7977,9 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
 
-vuetify@^1.5.1:
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.5.16.tgz#cc9d0199c389d64d15787ddc85ca47a28225eeee"
+vuetify@^1.5.14:
+  version "1.5.18"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.5.18.tgz#1522d7ef7686b4473bb67b274ae8bb7bca514d13"
 
 vuex@^3.1.1:
   version "3.1.1"
