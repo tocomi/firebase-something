@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { firebaseMutations, firebaseAction } from 'vuexfire'
+import { vuexfireMutations, firestoreAction } from 'vuexfire'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -7,11 +7,11 @@ const createStore = () => {
       users: [],
     },
     mutations: {
-      ...firebaseMutations,
+      ...vuexfireMutations,
     },
     actions: {
-      setUsersRef: firebaseAction(({ bindFirebaseRef }, ref) => {
-        bindFirebaseRef('users', ref)
+      setUsersRef: firestoreAction(({ bindFirestoreRef }, ref) => {
+        bindFirestoreRef('users', ref)
       })
     },
     getters: {
