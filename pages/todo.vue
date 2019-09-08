@@ -12,7 +12,7 @@ v-layout
           ul
             li name: {{ user.name }}
             li email: {{ user.email }}
-            v-btn(flat small) delete
+            v-btn(flat small @click="deleteData(user)") delete
 </template>
 
 <script lang="ts">
@@ -43,6 +43,11 @@ export default class Inspire extends Vue {
     userRef.add(user)
     this.name = ''
     this.email = ''
+  }
+
+  deleteData(user): void {
+    const userRef = db.collection('users')
+    userRef.doc(user.id).delete()
   }
 
 }
