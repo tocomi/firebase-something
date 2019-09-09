@@ -1,11 +1,11 @@
 <template lang="pug">
-v-layout
-  v-flex(xs12)
+v-layout(wrap)
+  v-flex(xs12 sm4)
     div#input
       v-text-field(v-model="name" placeholder="name")
       v-text-field(v-model="email" placeholder="email")
       v-btn(@click="submit") submit
-  v-flex(xs12)
+  v-flex(xs12 sm8)
     div#list
       ul
         li(v-for="(user, userIdx) in users" :key="userIdx")
