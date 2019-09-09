@@ -5,6 +5,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       users: [],
+      todos: [],
     },
     mutations: {
       ...vuexfireMutations,
@@ -12,11 +13,17 @@ const createStore = () => {
     actions: {
       setUsersRef: firestoreAction(({ bindFirestoreRef }, ref) => {
         bindFirestoreRef('users', ref)
-      })
+      }),
+      setTodosRef: firestoreAction(({ bindFirestoreRef }, ref) => {
+        bindFirestoreRef('todos', ref)
+      }),
     },
     getters: {
       getUsers: (state) => {
         return state.users
+      },
+      getTodos: (state) => {
+        return state.todos
       }
     },
   })

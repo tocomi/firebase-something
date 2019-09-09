@@ -8,11 +8,8 @@ v-layout(wrap)
   v-flex(xs12 sm8)
     div#list
       ul
-        li(v-for="(user, userIdx) in users" :key="userIdx")
-          ul
-            li name: {{ user.name }}
-            li email: {{ user.email }}
-            v-btn(flat small @click="deleteData(user)") delete
+        li(v-for="(todo, index) in todos" :key="index")
+          ul {{ todo.title }}
 </template>
 
 <script lang="ts">
@@ -21,7 +18,10 @@ import { db } from '../plugins/firebase'
 import { mapGetters } from 'vuex'
 
 @Component({
-  computed: mapGetters({ users: 'getUsers' })
+  computed: mapGetters({ 
+    users: 'getUsers',
+    todos: 'getTodos',
+  })
 })
 export default class Inspire extends Vue {
 
@@ -31,6 +31,7 @@ export default class Inspire extends Vue {
 
   created(): void {
     this.$store.dispatch('setUsersRef', db.collection('users'))
+    this.$store.dispatch('setTodosRef', db.collection('todos'))
   }
 
   submit(): void {
