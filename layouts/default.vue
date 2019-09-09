@@ -98,17 +98,13 @@ export default {
       items: [
         {
           icon: 'apps',
-          title: 'Welcome',
+          title: 'Todo',
           to: '/'
         },
         {
           icon: 'bubble_chart',
           title: 'Qiita',
           to: '/qiita'
-        },
-        {
-          title: 'Todo',
-          to: '/todo'
         },
       ],
       miniVariant: false,
