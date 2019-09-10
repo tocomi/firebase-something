@@ -9,7 +9,7 @@ v-layout(wrap)
     div#list
       ul
         li(v-for="(todo, index) in todos" :key="index")
-          ul {{ todo.title }}
+          Todo(:todo="todo")
 </template>
 
 <script lang="ts">
@@ -17,11 +17,16 @@ import { Component, Vue } from 'vue-property-decorator'
 import { db } from '../plugins/firebase'
 import { mapGetters } from 'vuex'
 
+import Todo from '../components/Todo.vue'
+
 @Component({
   computed: mapGetters({ 
     users: 'getUsers',
     todos: 'getTodos',
-  })
+  }),
+  components: {
+    Todo,
+  }
 })
 export default class Inspire extends Vue {
 
