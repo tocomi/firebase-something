@@ -1,40 +1,14 @@
-<template>
-  <v-layout>
-    <v-flex text-xs-center>
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-      <v-btn @click="smash">SMAAAAAAASH!!</v-btn>
-      <p>{{ count }}</p>
-      <li v-for="item in items" :key="item.id">
-        <h4>
-          <span>{{ item.title }}</span>
-          <small>
-            <span>by </span>
-            <nuxt-link :to="`/users/${item.user.id}`">
-              {{ item.user.id }}
-            </nuxt-link>
-          </small>
-        </h4>
-        <div>{{ item.body.slice(0, 130) }}......</div>
-        <p><a :href="item.url" target="_blank">{{ item.url }}</a></p>
-      </li>
-    </v-flex>
-  </v-layout>
+<template lang="pug">
+  v-layout
+    v-flex(text-xs-center)
+      img.mb-5(src="/v.png" alt="Vuetify.js")
+      PostedItem(v-for="item in items" :key="item.id" :item="item")
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+
+import PostedItem from '../components/PostedItem.vue'
 
 @Component({
   async asyncData({ app }) {
@@ -42,15 +16,12 @@ import { Component, Vue } from 'vue-property-decorator'
     return {
       items
     }
+  },
+  components: {
+    PostedItem,
   }
 })
 export default class Qiita extends Vue {
-
-  count: number = 1
-
-  smash(): void {
-    this.count *= 2
-  }
 
 }
 </script>
