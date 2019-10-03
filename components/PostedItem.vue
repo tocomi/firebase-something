@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.posted-item
+  v-card.posted-item
     h4
       span {{ item.title }} 
       small
@@ -21,4 +21,8 @@ export default class PostedItem extends Vue {
 }
 </script>
 
-
+<style lang="scss" scoped>
+.posted-item {
+  padding: 10px 0;
+}
+</style>
