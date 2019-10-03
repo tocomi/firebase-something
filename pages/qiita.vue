@@ -44,7 +44,7 @@ import { Component, Vue } from 'vue-property-decorator'
     }
   }
 })
-export default class Inspire extends Vue {
+export default class Qiita extends Vue {
 
   count: number = 1
 
